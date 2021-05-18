@@ -17,14 +17,14 @@ public class Neutral implements Zustand{
 
         switch(i) {
             case 1:
-                System.out.println("Ich glaube du spinnst!!!");
+                System.out.println("[Unterhaltung] Ich glaube du spinnst!!!");
                 mensch.setZustand(new Bockig(mensch));
                 break;
             case 2: case 3: case 4:
-                System.out.println("OK, ist in Ordnung!");
+                System.out.println("[Unterhaltung] OK, ist in Ordnung!");
                 break;
             case 5: case 6:
-                System.out.println("Haha, ja das stimmt!");
+                System.out.println("[Unterhaltung] Haha, ja das stimmt!");
                 mensch.setZustand(new Fröhlich(mensch));
                 break;
         }
@@ -32,13 +32,13 @@ public class Neutral implements Zustand{
 
     @Override
     public void küssen() {
-        System.out.println("Hihi :-)");
+        System.out.println("[Küssen] Hihi :-)");
         mensch.setZustand(new Fröhlich(mensch));
     }
 
     @Override
     public void ärgern() {
-        System.out.println("Geht's dir noch gut?!?!");
+        System.out.println("[Ärgern] Geht's dir noch gut?!?!");
         mensch.setZustand(new Bockig(mensch));
     }
 }

@@ -16,23 +16,23 @@ public class Fröhlich implements Zustand{
 
         switch(i) {
             case 1: case 2:
-                System.out.println("OK, wenn du das meinst!");
+                System.out.println("[Unterhaltung] OK, wenn du das meinst!");
                 mensch.setZustand(new Neutral(mensch));
                 break;
             case 3: case 4: case 5: case 6:
-                System.out.println("Oh, das war aber lieb! <3");
+                System.out.println("[Unterhaltung] Oh, das war aber lieb! <3");
                 break;
         }
     }
 
     @Override
     public void küssen() {
-        System.out.println("Hoho :-D");
+        System.out.println("[Küssen] Hoho :-D");
     }
 
     @Override
     public void ärgern() {
-        System.out.println("Wie bitte?! Ist das dein Ernst?!");
+        System.out.println("[Ärgern] Wie bitte?! Ist das dein Ernst?!");
         mensch.setZustand(new Neutral(mensch));
     }
 }
